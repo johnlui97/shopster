@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C821D81A243A7A980062D521 /* HomeFeedCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = C821D819243A7A980062D521 /* HomeFeedCells.swift */; };
 		C89C22BD243A555300934DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89C22BC243A555300934DD3 /* AppDelegate.swift */; };
 		C89C22BF243A555300934DD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89C22BE243A555300934DD3 /* SceneDelegate.swift */; };
 		C89C22C1243A555300934DD3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89C22C0243A555300934DD3 /* TabBarController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C821D819243A7A980062D521 /* HomeFeedCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedCells.swift; sourceTree = "<group>"; };
 		C89C22B9243A555300934DD3 /* shopster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shopster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C89C22BC243A555300934DD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C89C22BE243A555300934DD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C821D818243A7A850062D521 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C821D819243A7A980062D521 /* HomeFeedCells.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		C89C22B0243A555300934DD3 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 		C89C22BB243A555300934DD3 /* shopster */ = {
 			isa = PBXGroup;
 			children = (
+				C821D818243A7A850062D521 /* Cells */,
 				C8F7D38A243A5DE200A0A6A0 /* ViewControllers */,
 				C89C22BC243A555300934DD3 /* AppDelegate.swift */,
 				C89C22BE243A555300934DD3 /* SceneDelegate.swift */,
@@ -77,8 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				C8F7D388243A5DA800A0A6A0 /* HomeFeedViewController.swift */,
-				C8F7D38F243A622C00A0A6A0 /* MessagesViewController.swift */,
 				C8F7D38B243A610300A0A6A0 /* ExploreViewController.swift */,
+				C8F7D38F243A622C00A0A6A0 /* MessagesViewController.swift */,
 				C8F7D38D243A61EA00A0A6A0 /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
@@ -160,6 +171,7 @@
 				C89C22BD243A555300934DD3 /* AppDelegate.swift in Sources */,
 				C8F7D38C243A610300A0A6A0 /* ExploreViewController.swift in Sources */,
 				C89C22BF243A555300934DD3 /* SceneDelegate.swift in Sources */,
+				C821D81A243A7A980062D521 /* HomeFeedCells.swift in Sources */,
 				C8F7D389243A5DA800A0A6A0 /* HomeFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
