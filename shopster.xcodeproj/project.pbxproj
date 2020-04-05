@@ -12,6 +12,10 @@
 		C89C22C1243A555300934DD3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89C22C0243A555300934DD3 /* TabBarController.swift */; };
 		C89C22C6243A555500934DD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C89C22C5243A555500934DD3 /* Assets.xcassets */; };
 		C89C22C9243A555500934DD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C89C22C7243A555500934DD3 /* LaunchScreen.storyboard */; };
+		C8F7D389243A5DA800A0A6A0 /* HomeFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7D388243A5DA800A0A6A0 /* HomeFeedViewController.swift */; };
+		C8F7D38C243A610300A0A6A0 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7D38B243A610300A0A6A0 /* ExploreViewController.swift */; };
+		C8F7D38E243A61EA00A0A6A0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7D38D243A61EA00A0A6A0 /* ProfileViewController.swift */; };
+		C8F7D390243A622C00A0A6A0 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7D38F243A622C00A0A6A0 /* MessagesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		C89C22C5243A555500934DD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C89C22C8243A555500934DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C89C22CA243A555500934DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8F7D388243A5DA800A0A6A0 /* HomeFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedViewController.swift; sourceTree = "<group>"; };
+		C8F7D38B243A610300A0A6A0 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		C8F7D38D243A61EA00A0A6A0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C8F7D38F243A622C00A0A6A0 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 		C89C22BB243A555300934DD3 /* shopster */ = {
 			isa = PBXGroup;
 			children = (
+				C8F7D38A243A5DE200A0A6A0 /* ViewControllers */,
 				C89C22BC243A555300934DD3 /* AppDelegate.swift */,
 				C89C22BE243A555300934DD3 /* SceneDelegate.swift */,
 				C89C22C0243A555300934DD3 /* TabBarController.swift */,
@@ -62,6 +71,17 @@
 				C89C22CA243A555500934DD3 /* Info.plist */,
 			);
 			path = shopster;
+			sourceTree = "<group>";
+		};
+		C8F7D38A243A5DE200A0A6A0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C8F7D388243A5DA800A0A6A0 /* HomeFeedViewController.swift */,
+				C8F7D38F243A622C00A0A6A0 /* MessagesViewController.swift */,
+				C8F7D38B243A610300A0A6A0 /* ExploreViewController.swift */,
+				C8F7D38D243A61EA00A0A6A0 /* ProfileViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +154,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8F7D38E243A61EA00A0A6A0 /* ProfileViewController.swift in Sources */,
+				C8F7D390243A622C00A0A6A0 /* MessagesViewController.swift in Sources */,
 				C89C22C1243A555300934DD3 /* TabBarController.swift in Sources */,
 				C89C22BD243A555300934DD3 /* AppDelegate.swift in Sources */,
+				C8F7D38C243A610300A0A6A0 /* ExploreViewController.swift in Sources */,
 				C89C22BF243A555300934DD3 /* SceneDelegate.swift in Sources */,
+				C8F7D389243A5DA800A0A6A0 /* HomeFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
