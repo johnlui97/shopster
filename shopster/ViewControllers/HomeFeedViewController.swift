@@ -44,4 +44,8 @@ extension UIViewController: UICollectionViewDelegate, UICollectionViewDataSource
         return cell
     }
     
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.navigationController?.pushViewController(ProductViewController(), animated: true)
+    }
+    
 }

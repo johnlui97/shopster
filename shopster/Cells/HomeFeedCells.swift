@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeFeedCells: UICollectionViewCell {
+class HomeFeedCells: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     //UI Elements
     
@@ -77,7 +77,7 @@ class HomeFeedCells: UICollectionViewCell {
         layout.scrollDirection = .horizontal
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell_id")
+        view.register(ProductCells.self, forCellWithReuseIdentifier: "cell_id")
         view.backgroundColor = .systemGreen
         return view
     }()
@@ -135,6 +135,8 @@ class HomeFeedCells: UICollectionViewCell {
         
         containerView.addSubview(productCollectionView)
         constraintProductCollectionView(childView: productCollectionView, parentView: containerView, referenceView: topContainerView)
+        productCollectionView.delegate = self
+        productCollectionView.dataSource = self
         
     }
     
@@ -142,5 +144,18 @@ class HomeFeedCells: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_id", for: indexPath) as! ProductCells
+        cell.backgroundColor = .systemTeal
+        return cell
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
     
 }
