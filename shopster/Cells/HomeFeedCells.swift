@@ -37,7 +37,7 @@ class HomeFeedCells: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         return stack
     }()
     
-    lazy var ownerImage: UIImageView = {
+    lazy var profileImage: UIImageView = {
         let image = UIImageView()
         let picture = UIImage(named: "defaultAvatar")
         image.image = picture
@@ -127,11 +127,11 @@ class HomeFeedCells: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         containerView.addSubview(topContainerView)
         constraintTopContainerView(childView: topContainerView, parentView: containerView)
         
-        topContainerView.addSubview(ownerImage)
-        constraintOwnerImage(childView: ownerImage, parentView: topContainerView)
+        topContainerView.addSubview(profileImage)
+        constraintOwnerImage(childView: profileImage, parentView: topContainerView)
         
         topContainerView.addSubview(labelVerticalStack)
-        constraintLabelStack(childView: labelVerticalStack, parentView: topContainerView, referenceView: ownerImage)
+        constraintLabelStack(childView: labelVerticalStack, parentView: topContainerView, referenceView: profileImage)
         
         containerView.addSubview(productCollectionView)
         constraintProductCollectionView(childView: productCollectionView, parentView: containerView, referenceView: topContainerView)

@@ -13,7 +13,6 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = .systemBlue
         setupTabBarElements()
     }
 
@@ -27,7 +26,7 @@ class TabBarController: UITabBarController {
         exploreController.tabBarItem.image = UIImage(named: "Public_Experiments_Normal")
         exploreController.tabBarItem.selectedImage = UIImage(named: "Public_Experiments_Normal")
         
-        let messagesController = UINavigationController(rootViewController: MessagesViewController())
+        let messagesController = UINavigationController(rootViewController: ConversationsViewController())
         messagesController.tabBarItem.image = UIImage(named: "FAQ_Normal")
         messagesController.tabBarItem.selectedImage = UIImage(named: "FAQ_Normal")
         
