@@ -16,7 +16,6 @@
 		C821D820243ABAE20062D521 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C821D81F243ABAE20062D521 /* MessagesTableViewCell.swift */; };
 		C821D823243B80750062D521 /* MessagesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C821D822243B80750062D521 /* MessagesStruct.swift */; };
 		C821D825243BA33E0062D521 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C821D824243BA33E0062D521 /* ConversationsViewController.swift */; };
-		C84C2662243C1BCD0095D512 /* WelcomeExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84C2661243C1BCD0095D512 /* WelcomeExplainViewController.swift */; };
 		C89C22BD243A555300934DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89C22BC243A555300934DD3 /* AppDelegate.swift */; };
 		C89C22BF243A555300934DD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89C22BE243A555300934DD3 /* SceneDelegate.swift */; };
 		C89C22C1243A555300934DD3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89C22C0243A555300934DD3 /* TabBarController.swift */; };
@@ -38,7 +37,6 @@
 		C821D81F243ABAE20062D521 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		C821D822243B80750062D521 /* MessagesStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesStruct.swift; sourceTree = "<group>"; };
 		C821D824243BA33E0062D521 /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
-		C84C2661243C1BCD0095D512 /* WelcomeExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeExplainViewController.swift; sourceTree = "<group>"; };
 		C89C22B9243A555300934DD3 /* shopster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shopster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C89C22BC243A555300934DD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C89C22BE243A555300934DD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				C80C2C8B243BFF0C0056498F /* WelcomeViewController.swift */,
-				C84C2661243C1BCD0095D512 /* WelcomeExplainViewController.swift */,
 			);
 			path = PostInstallViewControllers;
 			sourceTree = "<group>";
@@ -224,7 +221,6 @@
 				C821D825243BA33E0062D521 /* ConversationsViewController.swift in Sources */,
 				C8F7D389243A5DA800A0A6A0 /* HomeFeedViewController.swift in Sources */,
 				C80C2C8A243BB65F0056498F /* ConversationCell.swift in Sources */,
-				C84C2662243C1BCD0095D512 /* WelcomeExplainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

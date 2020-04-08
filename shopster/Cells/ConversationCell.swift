@@ -66,8 +66,6 @@ class ConversationCell: UITableViewCell {
     private func constraintProfileImage(childView: UIImageView) {
         childView.topAnchor.constraint(equalTo: topAnchor, constant: 12).isActive = true
         childView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
-//        childView.widthAnchor.constraint(equalToConstant: labelStacks.frame.height).isActive = true
-//        childView.heightAnchor.constraint(equalToConstant: labelStacks.frame.height).isActive = true
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

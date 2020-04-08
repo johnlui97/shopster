@@ -78,7 +78,9 @@ class HomeFeedCells: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.register(ProductCells.self, forCellWithReuseIdentifier: "cell_id")
-        view.backgroundColor = .systemGreen
+        view.backgroundColor = .systemGray
+        view.isPagingEnabled = true
+        view.showsHorizontalScrollIndicator = false
         return view
     }()
     
@@ -156,6 +158,10 @@ class HomeFeedCells: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
     
 }
