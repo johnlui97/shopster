@@ -10,68 +10,62 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
-    lazy var welcomeTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Welcome to Shopster!"
-        label.font = UIFont(name: "Futura", size: 32)
-        label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    var cellID = "onboarding_cells"
+    
+    lazy var welcomeCollectionView:UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .systemRed
+        view.isScrollEnabled = false
+        view.isPagingEnabled = true
+        view.showsHorizontalScrollIndicator = false
+        return view
     }()
     
-    lazy var welcomeMessage:UILabel = {
-        let label = UILabel()
-        label.text = "Thanks for giving us a try! We're really excited to have you here, and we think you'll really enjoy it."
-        label.font = UIFont(name: "Futura", size: 16)
-        label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    lazy var labelVerticalStack: UIStackView = {
-        let stack = UIStackView()
-        stack.addArrangedSubview(welcomeTitleLabel)
-        stack.addArrangedSubview(welcomeMessage)
-        stack.axis = .vertical
-        stack.spacing = 8
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        return stack
-    }()
-    
-    private func constraintVerticalStackView() {
-        labelVerticalStack.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        labelVerticalStack.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        labelVerticalStack.widthAnchor.constraint(equalToConstant: 250).isActive = true
-        labelVerticalStack.heightAnchor.constraint(equalToConstant: 175).isActive = true
+    private func constrainWelcomeCollectionView() {
+        welcomeCollectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        welcomeCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        welcomeCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        welcomeCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemYellow
+        view.addSubview(welcomeCollectionView)
+        constrainWelcomeCollectionView()
         
-        view.addSubview(labelVerticalStack)
-        constraintVerticalStackView()
-        
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapAnimation)))
+        welcomeCollectionView.register(WelcomeCollectionViewCell.self, forCellWithReuseIdentifier: cellID)
+        welcomeCollectionView.delegate = self
+        welcomeCollectionView.dataSource = self
     }
     
-    @objc fileprivate func handleTapAnimation() {
-        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
-            self.welcomeTitleLabel.transform = CGAffineTransform(translationX: -30, y: 0)
-        }) { (_) in
-            UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 2.5, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
-                self.welcomeTitleLabel.transform = self.welcomeTitleLabel.transform.translatedBy(x: 0, y: -250)
-                self.welcomeTitleLabel.alpha = 0
-            })
+    internal override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    internal override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: view.frame.height)
+    }
+    
+    internal override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Transitioning")
+        guard indexPath.row > indexPath.count else {
+            let nextIndexPath = NSIndexPath(row: indexPath.row + 1, section: indexPath.section)
+            self.welcomeCollectionView.scrollToItem(at: nextIndexPath as IndexPath, at: .right, animated: true)
+            return
         }
-
-        UIView.animate(withDuration: 0.5, delay: 1, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
-             self.welcomeMessage.transform = CGAffineTransform(translationX: -30, y: 0)
-        }) { (_) in
-             UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 2.5, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
-                 self.welcomeMessage.transform = self.welcomeMessage.transform.translatedBy(x: 0, y: -250)
-                 self.welcomeMessage.alpha = 0
-             })
-        }
+    }
+    
+    internal override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = welcomeCollectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! WelcomeCollectionViewCell
+        cell.viewNumber = indexPath.row
+        cell.backgroundColor = indexPath.row%2==0 ? .systemYellow : .systemBlue
+        return cell
+    }
+    
+    internal func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
 }

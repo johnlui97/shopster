@@ -16,6 +16,9 @@
 		C821D820243ABAE20062D521 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C821D81F243ABAE20062D521 /* MessagesTableViewCell.swift */; };
 		C821D823243B80750062D521 /* MessagesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C821D822243B80750062D521 /* MessagesStruct.swift */; };
 		C821D825243BA33E0062D521 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C821D824243BA33E0062D521 /* ConversationsViewController.swift */; };
+		C8875DB9243E596600D52420 /* WelcomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8875DB8243E596600D52420 /* WelcomeCollectionViewCell.swift */; };
+		C8875DBB243EA2D900D52420 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8875DBA243EA2D900D52420 /* LoginViewController.swift */; };
+		C8875DBD243EA5C500D52420 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8875DBC243EA5C500D52420 /* SignupViewController.swift */; };
 		C89C22BD243A555300934DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89C22BC243A555300934DD3 /* AppDelegate.swift */; };
 		C89C22BF243A555300934DD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89C22BE243A555300934DD3 /* SceneDelegate.swift */; };
 		C89C22C1243A555300934DD3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89C22C0243A555300934DD3 /* TabBarController.swift */; };
@@ -37,6 +40,9 @@
 		C821D81F243ABAE20062D521 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		C821D822243B80750062D521 /* MessagesStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesStruct.swift; sourceTree = "<group>"; };
 		C821D824243BA33E0062D521 /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
+		C8875DB8243E596600D52420 /* WelcomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		C8875DBA243EA2D900D52420 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C8875DBC243EA5C500D52420 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		C89C22B9243A555300934DD3 /* shopster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shopster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C89C22BC243A555300934DD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C89C22BE243A555300934DD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +74,7 @@
 				C821D81B243AAA560062D521 /* ProductCells.swift */,
 				C821D81F243ABAE20062D521 /* MessagesTableViewCell.swift */,
 				C80C2C89243BB65F0056498F /* ConversationCell.swift */,
+				C8875DB8243E596600D52420 /* WelcomeCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -131,6 +138,8 @@
 				C821D824243BA33E0062D521 /* ConversationsViewController.swift */,
 				C8F7D38F243A622C00A0A6A0 /* MessagesViewController.swift */,
 				C8F7D38D243A61EA00A0A6A0 /* ProfileViewController.swift */,
+				C8875DBA243EA2D900D52420 /* LoginViewController.swift */,
+				C8875DBC243EA5C500D52420 /* SignupViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -209,8 +218,11 @@
 				C80C2C8C243BFF0C0056498F /* WelcomeViewController.swift in Sources */,
 				C8140524243BA4FD004A7F6F /* ContactStruct.swift in Sources */,
 				C821D820243ABAE20062D521 /* MessagesTableViewCell.swift in Sources */,
+				C8875DBB243EA2D900D52420 /* LoginViewController.swift in Sources */,
 				C8F7D390243A622C00A0A6A0 /* MessagesViewController.swift in Sources */,
 				C89C22C1243A555300934DD3 /* TabBarController.swift in Sources */,
+				C8875DB9243E596600D52420 /* WelcomeCollectionViewCell.swift in Sources */,
+				C8875DBD243EA5C500D52420 /* SignupViewController.swift in Sources */,
 				C821D823243B80750062D521 /* MessagesStruct.swift in Sources */,
 				C89C22BD243A555300934DD3 /* AppDelegate.swift in Sources */,
 				C821D81C243AAA560062D521 /* ProductCells.swift in Sources */,
