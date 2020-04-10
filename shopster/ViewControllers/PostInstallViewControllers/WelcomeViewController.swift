@@ -12,12 +12,22 @@ class WelcomeViewController: UIViewController {
     
     var cellID = "onboarding_cells"
     
+    var welcomeLabelTitleText = ["Welcome to Shopster!",
+                                 "Building a sustainable future.",
+                                 "Saving you time and money.",
+                                 "Inspiring unique looks."]
+    
+    var welcomeLabelMessageText = ["Thanks for giving us a try! We think you'll really enjoy it here. Shopster! is an awsome platform to buy vintage clothes.",
+                                   "Recycling clothes you won't wear is a great way to prolong its life!",
+                                   "Buying second hand saves you the time and money of buying retail.",
+                                   "Search for unique peices, and pull off a retro look!"]
+    
     lazy var welcomeCollectionView:UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .systemRed
+        view.backgroundColor = .systemGray4
         view.isScrollEnabled = false
         view.isPagingEnabled = true
         view.showsHorizontalScrollIndicator = false
@@ -50,7 +60,6 @@ class WelcomeViewController: UIViewController {
     }
     
     internal override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Transitioning")
         guard indexPath.row > indexPath.count else {
             let nextIndexPath = NSIndexPath(row: indexPath.row + 1, section: indexPath.section)
             self.welcomeCollectionView.scrollToItem(at: nextIndexPath as IndexPath, at: .right, animated: true)
@@ -60,8 +69,8 @@ class WelcomeViewController: UIViewController {
     
     internal override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = welcomeCollectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! WelcomeCollectionViewCell
-        cell.viewNumber = indexPath.row
-        cell.backgroundColor = indexPath.row%2==0 ? .systemYellow : .systemBlue
+        cell.welcomeLabel.text = welcomeLabelTitleText[indexPath.row]
+        cell.welcomeMessageLabel.text = welcomeLabelMessageText[indexPath.row]
         return cell
     }
     
