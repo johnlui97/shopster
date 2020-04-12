@@ -34,7 +34,11 @@ class TabBarController: UITabBarController {
         profileController.tabBarItem.image = UIImage(named: "Profile_Normal")
         profileController.tabBarItem.selectedImage = UIImage(named: "Profile_Normal")
         
-        viewControllers = [homeFeedController, exploreController, messagesController, profileController]
+        let settingsController = UINavigationController(rootViewController: SettingsViewController())
+        settingsController.tabBarItem.image = UIImage(named: "settings")
+        settingsController.tabBarItem.selectedImage = UIImage(named: "settings")
+        
+        viewControllers = [homeFeedController, exploreController, profileController, messagesController, settingsController]
     }
 
 }

@@ -12,6 +12,5 @@ import UIKit
 struct ConversationStruct {
     let Name:String
     let Timestamp:String
-    let ProfileImage:UIImage
     let lastMessage:String
 }

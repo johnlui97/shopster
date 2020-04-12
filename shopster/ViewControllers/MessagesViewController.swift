@@ -26,7 +26,7 @@ class MessagesViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemGray4
+        view.backgroundColor = .white
         tableView.register(MessagesTableViewCell.self, forCellReuseIdentifier: cellID)
         tableView.separatorStyle = .none
     }
