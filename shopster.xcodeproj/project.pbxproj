@@ -21,6 +21,8 @@
 		C8875DBB243EA2D900D52420 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8875DBA243EA2D900D52420 /* LoginViewController.swift */; };
 		C8875DBD243EA5C500D52420 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8875DBC243EA5C500D52420 /* SignupViewController.swift */; };
 		C8875DBF244242D000D52420 /* ProfileCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8875DBE244242D000D52420 /* ProfileCells.swift */; };
+		C88BE0B22443987A004355BA /* ProfileTimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88BE0B12443987A004355BA /* ProfileTimelineCell.swift */; };
+		C88BE0B42443E135004355BA /* LikedImagesCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88BE0B32443E135004355BA /* LikedImagesCells.swift */; };
 		C89C22BD243A555300934DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89C22BC243A555300934DD3 /* AppDelegate.swift */; };
 		C89C22BF243A555300934DD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89C22BE243A555300934DD3 /* SceneDelegate.swift */; };
 		C89C22C1243A555300934DD3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89C22C0243A555300934DD3 /* TabBarController.swift */; };
@@ -47,6 +49,8 @@
 		C8875DBA243EA2D900D52420 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C8875DBC243EA5C500D52420 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		C8875DBE244242D000D52420 /* ProfileCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCells.swift; sourceTree = "<group>"; };
+		C88BE0B12443987A004355BA /* ProfileTimelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTimelineCell.swift; sourceTree = "<group>"; };
+		C88BE0B32443E135004355BA /* LikedImagesCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedImagesCells.swift; sourceTree = "<group>"; };
 		C89C22B9243A555300934DD3 /* shopster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shopster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C89C22BC243A555300934DD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C89C22BE243A555300934DD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 				C80C2C89243BB65F0056498F /* ConversationCell.swift */,
 				C8875DB8243E596600D52420 /* WelcomeCollectionViewCell.swift */,
 				C8875DBE244242D000D52420 /* ProfileCells.swift */,
+				C88BE0B12443987A004355BA /* ProfileTimelineCell.swift */,
+				C88BE0B32443E135004355BA /* LikedImagesCells.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -222,6 +228,7 @@
 			files = (
 				C8F7D38E243A61EA00A0A6A0 /* SettingsViewController.swift in Sources */,
 				C80C2C8C243BFF0C0056498F /* WelcomeViewController.swift in Sources */,
+				C88BE0B22443987A004355BA /* ProfileTimelineCell.swift in Sources */,
 				C8140524243BA4FD004A7F6F /* ContactStruct.swift in Sources */,
 				C821D820243ABAE20062D521 /* MessagesTableViewCell.swift in Sources */,
 				C8875DBB243EA2D900D52420 /* LoginViewController.swift in Sources */,
@@ -239,6 +246,7 @@
 				C821D81E243AB0390062D521 /* ProductViewController.swift in Sources */,
 				C821D825243BA33E0062D521 /* ConversationsViewController.swift in Sources */,
 				C884566A244247B200A93D2B /* ProfileViewController.swift in Sources */,
+				C88BE0B42443E135004355BA /* LikedImagesCells.swift in Sources */,
 				C8F7D389243A5DA800A0A6A0 /* HomeFeedViewController.swift in Sources */,
 				C80C2C8A243BB65F0056498F /* ConversationCell.swift in Sources */,
 			);
