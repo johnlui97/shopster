@@ -23,6 +23,7 @@
 		C8875DBF244242D000D52420 /* ProfileCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8875DBE244242D000D52420 /* ProfileCells.swift */; };
 		C88BE0B22443987A004355BA /* ProfileTimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88BE0B12443987A004355BA /* ProfileTimelineCell.swift */; };
 		C88BE0B42443E135004355BA /* LikedImagesCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88BE0B32443E135004355BA /* LikedImagesCells.swift */; };
+		C88BE0B62444BBB0004355BA /* ExploreCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88BE0B52444BBB0004355BA /* ExploreCells.swift */; };
 		C89C22BD243A555300934DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89C22BC243A555300934DD3 /* AppDelegate.swift */; };
 		C89C22BF243A555300934DD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89C22BE243A555300934DD3 /* SceneDelegate.swift */; };
 		C89C22C1243A555300934DD3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89C22C0243A555300934DD3 /* TabBarController.swift */; };
@@ -51,6 +52,7 @@
 		C8875DBE244242D000D52420 /* ProfileCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCells.swift; sourceTree = "<group>"; };
 		C88BE0B12443987A004355BA /* ProfileTimelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTimelineCell.swift; sourceTree = "<group>"; };
 		C88BE0B32443E135004355BA /* LikedImagesCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedImagesCells.swift; sourceTree = "<group>"; };
+		C88BE0B52444BBB0004355BA /* ExploreCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCells.swift; sourceTree = "<group>"; };
 		C89C22B9243A555300934DD3 /* shopster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shopster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C89C22BC243A555300934DD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C89C22BE243A555300934DD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				C8875DBE244242D000D52420 /* ProfileCells.swift */,
 				C88BE0B12443987A004355BA /* ProfileTimelineCell.swift */,
 				C88BE0B32443E135004355BA /* LikedImagesCells.swift */,
+				C88BE0B52444BBB0004355BA /* ExploreCells.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				C821D820243ABAE20062D521 /* MessagesTableViewCell.swift in Sources */,
 				C8875DBB243EA2D900D52420 /* LoginViewController.swift in Sources */,
 				C8F7D390243A622C00A0A6A0 /* MessagesViewController.swift in Sources */,
+				C88BE0B62444BBB0004355BA /* ExploreCells.swift in Sources */,
 				C89C22C1243A555300934DD3 /* TabBarController.swift in Sources */,
 				C8875DB9243E596600D52420 /* WelcomeCollectionViewCell.swift in Sources */,
 				C8875DBD243EA5C500D52420 /* SignupViewController.swift in Sources */,

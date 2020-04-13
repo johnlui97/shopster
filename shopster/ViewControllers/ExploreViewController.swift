@@ -12,12 +12,29 @@ class ExploreViewController: UIViewController {
     
     var cellID = "explore_cellID"
     
+    var sampleDataCall = [ UIImage(named: "adidas1"),
+                           UIImage(named: "levis1"),
+                           UIImage(named: "model"),
+                           UIImage(named: "nike1"),
+                           UIImage(named: "nike2"),
+                           UIImage(named: "profileTimeline"),
+                           UIImage(named: "aritzia"),
+                           UIImage(named: "burb"),
+                           UIImage(named: "canadagoose"),
+                           UIImage(named: "dr"),
+                           UIImage(named: "gap"),
+                           UIImage(named: "kanye"),
+                           UIImage(named: "lv"),
+                           UIImage(named: "uni"),
+                           UIImage(named: "uniqlo")
+    ]
+    
     lazy var exploreCollectionView:UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellID)
+        view.register(ExploreCells.self, forCellWithReuseIdentifier: cellID)
         view.showsVerticalScrollIndicator = false
         view.backgroundColor = .systemOrange
         return view
@@ -44,16 +61,30 @@ class ExploreViewController: UIViewController {
     }
     
     internal override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height/4)
+        
+        var width: CGFloat
+        
+        if(indexPath.row == 0 || indexPath.row == 1) {
+            width = ((view.frame.width) - 2 * 8)/2
+            return CGSize(width: width, height: width)
+        }
+        
+        if(indexPath.row == 2 || indexPath.row == 3 || indexPath.row == 4) {
+            width = ((view.frame.width) - 3 * 8)/3
+            return CGSize(width: width, height: width)
+        }
+        
+        width = ((view.frame.width) - 3 * 8)/3
+        return CGSize(width: width, height: view.frame.height/4)
     }
     
     internal override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return sampleDataCall.count
     }
     
     internal override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
-        cell.backgroundColor = .systemIndigo
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! ExploreCells
+        cell.exploreImages.image = sampleDataCall[indexPath.row]
         return cell
     }
 }
